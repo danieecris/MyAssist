@@ -62,15 +62,16 @@
                     <div class="col-12 my-3">
 
                         <label for="defeito" class="form-label">Defeito</label>
-                        <textarea name="defeito" id="defeito" class="form-control" placeholder="Ex: O equipamento..."
-                            maxlength="500" required></textarea>
+                        <textarea name="defeito" id="defeito" class="form-control"
+                            placeholder="Ex: O equipamento..." maxlength="500" required></textarea>
 
                     </div>
 
 
                     <div class="col-md-6 my-3">
                         <label for="previsaoEntrega" class="form-label">Previsão de Entrega</label>
-                        <input type="date" name="previsaoEntrega" id="previsaoEntrega" class="form-control" required>
+                        <input type="date" name="previsaoEntrega" id="previsaoEntrega" class="form-control"
+                            required>
                     </div>
 
                     <div class="col-md-6 my-3">
@@ -89,13 +90,14 @@
                     <div class="col-12 my-3">
 
                         <label for="observacoes" class="form-label">Observacoes</label>
-                        <textarea name="observacoes" id="observacoes" class="form-control"
+                        <textarea name="observacoes" id="observacoesProduto" class="form-control"
                             placeholder="Ex: O equipamento" maxlength="500" required> </textarea>
 
                     </div>
 
                     <div class="my-3 d-flex justify-content-end">
-                        <button type="submit" class="btn btn-primary">Cadastrar Equipamento>></button>
+                        <button type="submit" class="btn btn-primary" onclick="adicionarItem()">Cadastrar
+                            Equipamento>></button>
                     </div>
 
                 </div>
@@ -110,15 +112,15 @@
         <!-- Fim cadastro equipamento -->
 
 
-        <section class="border rounded p-4 my-5" >
+        <section class="border rounded p-4 my-5">
             <h2 class="display-6">Realizar busca</h2>
-                
+
             <form action="busca" id="busca" a method="post">
 
                 <div class="my-2 d-flex">
 
-                    <input type="text" id="seacher" name="seacher" 
-                    placeholder="Buscar proprietario..." required class="form-control py-2">
+                    <input type="text" id="seacher" name="seacher" placeholder="Buscar proprietario..." required
+                        class="form-control py-2">
 
                     <button type="submit" class="btn btn-primary ms-2 ">Buscar</button>
 
@@ -128,89 +130,48 @@
 
             <h2 class="display-6 mt-4">Resultado da busca</h2>
 
-           
 
-                <div> 
-                    
-                    <table class="table table-striped table-hover text-center">
 
-                        <thead class="table-primary">
+            <div>
 
-                            <tr>
+                <table class="table table-striped table-hover text-center">
 
-                                <th>Cod.</th>
-                                <th>Propritario</th>   
-                                <th>Entrada</th>
-                                <th>Defeito</th>
-                                <th>Status</th>
-                                <th>Observacoes</th>
-                                <th>Opcoes</th>
+                    <thead class="table-primary">
 
-                            </tr>
+                        <tr>
 
-                        </thead>
+                            <th>Cod.</th>
+                            <th>Propritario</th>
+                            <th>Equipamento</th>
+                            <th>Entrada</th>
+                            <th>Defeito</th>
+                            <th>Status</th>
+                            <th>Observacoes</th>
+                            <th>Opcoes</th>
 
-                        <tbody>
+                        </tr>
 
-                            <tr>
+                    </thead>
 
-                                <td>01</td>
-                                <td>jimmy page</td>
-                                <td>24/03/2025</td>
-                                <td>Fio com mal contato</td>
-                                <td></td>
-                                <td>Em conserto</td>
-                                <td>orcamento aprovado</td>
-                                <td><a href="">Alterar dados</a></td>
+                    <tbody id="minhaLista">
+                    <!--A inclusão está sendo feita por meio do javaScript-->
+                    </tbody>
 
-                            </tr>
+                    <tfoot class="table-dark">
 
-                            <tr>
+                        <tr>
 
-                                <td>02</td>
-                                <td>Robert Plant</td>
-                                <td>19/03/2025</td>
-                                <td>Timer nao funciona</td>
-                                <td>19/03/2025</td>
-                                <td>Finalizado</td>
-                                <td>Orcamento aprovado</td>
-                                <td><a href="">Alterar dados</a></td>
+                            <td colspan="8">Dados Atualizado: 24/03/2025</td>
 
-                            </tr>
-<!--Daniel Cristian de Oliveira-->
+                        </tr>
 
-<!--Outro comentario-->
+                    </tfoot>
 
-                            <tr>
-                            
-                                <td>03</td>
-                                <td>Jhon Binhan</td>
-                                <td>01/03/2025</td>
-                                <td>Timer nao funciona</td>
-                                <td></td>
-                                <td>Em conserto</td>
-                                <td>Aguardando aprovacao</td>
-                                <td><a href="">Alterar dados</a></td>
-                            
-                            </tr>
+                </table>
 
-                        </tbody>
+            </div>
 
-                        <tfoot class="table-dark">
 
-                            <tr>
-
-                                <td colspan="8">Dados Atualizado: 24/03/2025</td>
-
-                            </tr>
-
-                        </tfoot>
-
-                    </table>
-
-                </div>
-
-           
 
         </section>
 
@@ -221,7 +182,7 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 
-<script src="../js/script.js"></script>
+    <script src="../js/script.js"></script>
 
 </body>
 
