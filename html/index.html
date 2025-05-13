@@ -77,13 +77,13 @@
                     <div class="col-md-6 my-3">
 
                         <label for="status" class="form-label">Status do conserto</label>
-                        <select name="status" id="status" class="form-select">
+                        <select name="status" id="status" class="form-select" required>
                             <option value="">Selecione o Status</option>
-                            <option value="">Aguardando aprovacao</option>
-                            <option value="">Aguardando orcamento</option>
-                            <option value="">Em conserto</option>
-                            <option value="">Finalizado</option>
-                        </select>
+                            <option value="Aguardando aprovação">Aguardando aprovação</option>
+                            <option value="Aguardando orçamento">Aguardando orçamento</option>
+                            <option value="Em conserto">Em conserto</option>
+                            <option value="Finalizado">Finalizado</option>              
+                         </select>
 
                     </div>
 
@@ -168,6 +168,9 @@
                     </tfoot>
 
                 </table>
+                <div class="my-3 d-flex justify-content-end">
+                    <button type="button" class="btn btn-primary" onclick="enviarEmail()">Enviar para o Email</button>
+                </div>
 
             </div>
 
@@ -183,6 +186,7 @@
         crossorigin="anonymous"></script>
 
     <script src="../js/script.js"></script>
+    <script src="../js/index.js"></script>
 
 </body>
 

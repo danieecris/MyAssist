@@ -34,6 +34,33 @@ function adicionarItem() {
 
     // Limpa o campo de input
   document.getElementById('cadastrarEquipamento').reset();
+
+  enviarEmail
   }
 
-  
+  //----------------------------------------------------------------------------------------------
+
+  function enviarEmail(){
+
+    const data = {
+        proprietario: document.getElementById('proprietario').value,
+        equipamento: document.getElementById('equipamento').value,
+        dataEntrada: document.getElementById('dataEntrada').value,
+        defeito: document.getElementById('defeito').value,
+        previsaoEntrega: document.getElementById('previsaoEntrega').value,
+        status: document.getElementById('status').value,
+        observacoesProduto: document.getElementById('observacoesProduto').value
+    };
+
+    fetch('/enviar-email', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+        .then(response => response.text())
+        .then(msg => alert(msg))
+        .catch(err => alert('Erro ao enviar: ' + err.message));
+
+}
