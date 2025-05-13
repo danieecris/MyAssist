@@ -35,3 +35,5 @@ function adicionarItem() {
     // Limpa o campo de input
   document.getElementById('cadastrarEquipamento').reset();
   }
+
+  
