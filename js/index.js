@@ -38,7 +38,8 @@ app.post('/enviar-email', async(req, res) =>{
           from: `Cadastro de equipamento <${process.env.EMAIL}>`,
           to: process.env.EMAIL_ENVIO,
           subject: 'E-mail de teste para subir nova alteracao ',
-          html
+          html,
+          text: 'E-mail enviado com sucesso!',
   });
 
 res.send('E-mail enviado com sucesso!');

@@ -35,7 +35,7 @@ function adicionarItem() {
     // Limpa o campo de input
   document.getElementById('cadastrarEquipamento').reset();
 
-  enviarEmail
+
   }
 
   //----------------------------------------------------------------------------------------------
@@ -60,7 +60,7 @@ function adicionarItem() {
         body: JSON.stringify(data)
     })
         .then(response => response.text())
-        .then(msg => alert(msg))
+        .then(msg => alert('E-mail enviado com sucesso'+ msg))
         .catch(err => alert('Erro ao enviar: ' + err.message));
 
 }
